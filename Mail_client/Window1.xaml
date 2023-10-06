@@ -1,0 +1,27 @@
+﻿<Window x:Class="Mail_client.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mail_client"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontWeight="Bold" FontSize="32">Mail</TextBlock>
+        <Button DockPanel.Dock="Bottom" Margin="5" Height="30" Width="100" Click="Button_Click">Load data</Button>
+        <TreeView Margin="5" Name="Folders">
+            <TreeView.Resources>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding FolderName}" />
+                    </StackPanel>
+                </DataTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding MailName}" />
+                    </StackPanel>
+                </DataTemplate>
+            </TreeView.Resources>
+        </TreeView>
+    </DockPanel>
+</Window>
