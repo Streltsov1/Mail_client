@@ -11,12 +11,12 @@
         <Button DockPanel.Dock="Bottom" Margin="5" Height="30" Width="100" Click="Button_Click">Load data</Button>
         <TreeView Margin="5" Name="Folders">
             <TreeView.Resources>
-                <DataTemplate>
+                <DataTemplate DataType="{x:Type local:Folder}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding FolderName}" />
                     </StackPanel>
                 </DataTemplate>
-                <DataTemplate>
+                <DataTemplate DataType="{x:Type local:Mail}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding MailName}" />
                     </StackPanel>
