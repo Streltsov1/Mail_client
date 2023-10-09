@@ -68,7 +68,7 @@ namespace Mail_client
                 {
                     Folder folder1 = new Folder();
                     folder1.FolderName = item.Name;
-                    //var folders = client.GetFolder(SpecialFolder.All);
+                    //var folders = client.GetFolder(SpecialFolder.);
                     //folders.Open(FolderAccess.ReadWrite);
                     //IList<UniqueId> uids = folders.Search(SearchQuery.All);
 
